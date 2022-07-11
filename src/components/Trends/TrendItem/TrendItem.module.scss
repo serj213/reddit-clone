@@ -1,0 +1,43 @@
+@import "../../../assets/styles/vars.scss";
+
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 178px;
+    border-radius: 8px;
+    padding: 12px;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    &__name,
+    &__text,
+    &__author {
+        position: relative;
+        z-index: 2;
+        color: $white;
+        margin-bottom: 3px;
+    }
+
+    &__name {
+        margin-top: auto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: calc(22 / 18 * 100%);
+    }
+
+    &__text {
+        text-overflow: ellipsis;
+        max-height: 40px;
+        margin-bottom: 5px;
+    }
+}

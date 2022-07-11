@@ -1,0 +1,44 @@
+@import "../../../assets/styles/vars.scss";
+
+.button {
+    display: inline-block;
+    height: 40px;
+    border-radius: 50px;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 100%;
+    padding: 4px 50px;
+    cursor: pointer;
+}
+
+.blue {
+    background-color: $blue;
+    color: $white;
+    transition: opacity 0.2s linear;
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.transparent {
+    border: 1px solid $blue;
+    color: $blue;
+    transition: background-color 0.2s linear;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgba($blue, 0.05);
+        }
+    }
+}
+
+.orange {
+    background-color: $orange;
+    color: $white;
+}
+
+.small {
+    height: 24px;
+}

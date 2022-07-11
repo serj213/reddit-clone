@@ -1,0 +1,16 @@
+@import "../../../assets/styles/vars.scss";
+
+body {
+    font-family: $noto;
+    font-weight: 400;
+    color: $text;
+    font-size: 14px;
+}
+
+.layout {
+    background-color: $bg;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 85px;
+}
