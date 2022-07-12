@@ -1,8 +1,16 @@
-import { put, takeEvery } from 'redux-saga/effects';
+import { put, takeEvery, call } from 'redux-saga/effects';
 import { trendCostants } from '../../types/trend';
+import { fetchTrendApi } from '../../Api/trendApi';
+import { loadingStatus } from '../../types/trend';
+import { setTrends, trendLoadingStatus } from '../Actions/trend';
 
-function* fetchTrendSaga() {
-  yield alert('dfdfdf');
+function* fetchTrendSaga(): any {
+  try {
+    const result = yield call(fetchTrendApi);
+    yield put(setTrends(result));
+  } catch (error) {
+    yield put(trendLoadingStatus(trendCostants.ERROR_TREND));
+  }
 }
 
 export function* trendWatchers() {

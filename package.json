@@ -16,8 +16,10 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/react-redux": "^7.1.24",
+    "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "immer": "^9.0.15",
+    "json-server": "^0.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
@@ -33,7 +35,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "fake-json": "json-server ./public/db.json --watch --port 3001"
   },
   "eslintConfig": {
     "extends": [

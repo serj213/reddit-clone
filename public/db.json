@@ -1,0 +1,32 @@
+{
+    "trends": [
+        {
+            "id":0,
+            "img":"https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg",
+            "name":"Заголовок 1",
+            "text":"Какой то текст статьи",
+            "author":"Я автор"
+         },
+         {
+            "id":1,
+            "img":"https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg",
+            "name":"Заголовок 2",
+            "text":"Какой то текст статьи",
+            "author":"Я автор"
+         },
+         {
+            "id":2,
+            "img":"https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg",
+            "name":"Заголовок 3",
+            "text":"Какой то текст статьи",
+            "author":"Я автор"
+         },
+         {
+            "id":3,
+            "img":"https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg",
+            "name":"Заголовок 4",
+            "text":"Какой то текст статьи",
+            "author":"Я автор"
+         }
+    ]
+}
