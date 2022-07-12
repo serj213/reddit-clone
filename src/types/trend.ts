@@ -10,8 +10,16 @@ export enum loadingStatus {
   ERROR = 'ERROR',
 }
 
+export interface trendItemT {
+  id: number;
+  img: string;
+  name: string;
+  text: string;
+  author: string;
+}
+
 export interface trendState {
-  trendArticles: any[];
+  trendArticles: trendItemT[];
   loading: loadingStatus;
 }
 

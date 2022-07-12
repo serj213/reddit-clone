@@ -1,12 +1,12 @@
 import { put, takeEvery, call } from 'redux-saga/effects';
-import { trendCostants } from '../../types/trend';
+import { trendCostants, trendItemT } from '../../types/trend';
 import { fetchTrendApi } from '../../Api/trendApi';
-import { loadingStatus } from '../../types/trend';
 import { setTrends, trendLoadingStatus } from '../Actions/trend';
+import { AxiosResponse } from 'axios';
 
-function* fetchTrendSaga(): any {
+function* fetchTrendSaga() {
   try {
-    const result = yield call(fetchTrendApi);
+    const result: trendItemT[] = yield call(fetchTrendApi);
     yield put(setTrends(result));
   } catch (error) {
     yield put(trendLoadingStatus(trendCostants.ERROR_TREND));
