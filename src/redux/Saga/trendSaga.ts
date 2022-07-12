@@ -2,7 +2,6 @@ import { put, takeEvery, call } from 'redux-saga/effects';
 import { trendCostants, trendItemT } from '../../types/trend';
 import { fetchTrendApi } from '../../Api/trendApi';
 import { setTrends, trendLoadingStatus } from '../Actions/trend';
-import { AxiosResponse } from 'axios';
 
 function* fetchTrendSaga() {
   try {

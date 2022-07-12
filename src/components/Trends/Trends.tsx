@@ -4,19 +4,25 @@ import { useAppSelector } from '../../hooks/useAppSelector';
 import { Title } from '../Common/Title/Title';
 import { RowsFour } from '../Common/RowsFour/RowsFour';
 import TrendItem from './TrendItem/TrendItem';
-import img from '../../assets/images/trends/02.jpg';
+import TrendSkeleton from './trendSkeleton';
+import { loadingStatus } from '../../types/trend';
 
 const Trends: React.FC = () => {
-  const { trendArticles } = useAppSelector((state) => state.trends);
+  const { trendArticles, loading } = useAppSelector((state) => state.trends);
+
+  const skeleton = [...new Array(4)].map((item, index) => {
+    return <TrendSkeleton />;
+  });
 
   return (
     <section>
       <Title>Trending today</Title>
       <RowsFour>
-        {trendArticles.length &&
-          trendArticles.map((item) => {
-            return <TrendItem key={item.id} {...item} />;
-          })}
+        {loading === loadingStatus.SUCCESS && trendArticles.length
+          ? trendArticles.map((item) => {
+              return <TrendItem key={item.id} {...item} />;
+            })
+          : skeleton}
       </RowsFour>
     </section>
   );
