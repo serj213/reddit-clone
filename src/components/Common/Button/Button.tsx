@@ -18,7 +18,13 @@ export const Button: React.FC<buttonProps> = ({
   small = false,
 }) => {
   return (
-    <button className={classnames(s.button, { [s.blue]: blue }, { [s.transparent]: transparent })}>
+    <button
+      className={classnames(
+        s.button,
+        { [s.blue]: blue },
+        { [s.transparent]: transparent },
+        { [s.post]: small },
+      )}>
       {children}
     </button>
   );

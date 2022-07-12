@@ -1,11 +1,12 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { useAppSelector } from '../../hooks/useAppSelector';
 import { Title } from '../Common/Title/Title';
 import { RowsFour } from '../Common/RowsFour/RowsFour';
 import TrendItem from './TrendItem/TrendItem';
 import TrendSkeleton from './trendSkeleton';
 import { loadingStatus } from '../../types/trend';
+
+import s from './trends.module.scss';
 
 const Trends: React.FC = () => {
   const { trendArticles, loading } = useAppSelector((state) => state.trends);
@@ -15,7 +16,7 @@ const Trends: React.FC = () => {
   });
 
   return (
-    <section>
+    <section className={s.trends}>
       <Title>Trending today</Title>
       <RowsFour>
         {loading === loadingStatus.SUCCESS && trendArticles.length
